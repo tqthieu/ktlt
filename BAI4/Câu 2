@@ -1,0 +1,4 @@
+s = input('Nhập Chuỗi:')
+for char in s:
+    if char not in {" ", "\t"}:
+        print(char)
