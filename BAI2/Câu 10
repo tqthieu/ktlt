@@ -1,0 +1,5 @@
+a="xin chao toi la sinh vien"
+b=a.split()
+print (b)
+c=" ".join(b)
+print(c)
