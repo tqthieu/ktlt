@@ -1,0 +1,23 @@
+# Import module
+from sort_module10 import bubbleSort
+
+def main():
+    # Nhập số lượng phần tử của danh sách
+    n = int(input("Nhập số lượng phần tử trong danh sách: "))
+    
+    # Nhập danh sách từ người dùng
+    nlist = []
+    print("Nhập các phần tử của danh sách:")
+    for i in range(n):
+        nlist.append(int(input(f"Phần tử thứ {i+1}: ")))
+
+    print("Danh sách trước khi sắp xếp:", nlist)
+
+    # Gọi hàm bubbleSort từ module
+    sorted_list = bubbleSort(nlist)
+
+    # Hiển thị danh sách sau khi sắp xếp
+    print("Danh sách sau khi sắp xếp:", sorted_list)
+
+if __name__ == "__main__":
+    main()
