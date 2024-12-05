@@ -1,0 +1,16 @@
+# Nhập một dãy các từ từ bàn phím
+chuoi = input("Nhập một dãy các từ, cách nhau bằng khoảng trắng: ")
+
+# Tách dãy thành các từ
+tu_danh_sach = chuoi.split()
+
+# Tìm độ dài lớn nhất của từ
+do_dai_max = max(len(tu) for tu in tu_danh_sach)
+
+# Tìm tất cả các từ có độ dài lớn nhất
+tu_dai_nhat = [tu for tu in tu_danh_sach if len(tu) == do_dai_max]
+
+# In kết quả
+print("Từ dài nhất (hoặc các từ có cùng độ dài nhất):")
+for tu in tu_dai_nhat:
+    print(tu)
