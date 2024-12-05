@@ -1,0 +1,20 @@
+def check_even_digits(number):
+    # Kiểm tra từng chữ số trong số
+    for digit in str(number):
+        if int(digit) % 2 != 0:
+            return False
+    return True
+
+def find_numbers_with_even_digits():
+    result = []
+
+    # Lặp qua tất cả các số từ 1000 đến 3000
+    for num in range(1000, 3001):
+        if check_even_digits(num):
+            result.append(str(num))
+
+    # In các số tìm được, phân tách bằng dấu phẩy
+    print(','.join(result))
+
+# Gọi hàm để tìm và in các số
+find_numbers_with_even_digits()
