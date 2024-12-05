@@ -1,0 +1,3 @@
+s=input('nhập chuỗi:')
+for char in s:
+    print(char.upper())
