@@ -1,0 +1,19 @@
+def binary_search(lst, value):
+    """
+    Hàm tìm kiếm nhị phân (Binary Search).
+    :param lst: Danh sách đã được sắp xếp.
+    :param value: Giá trị cần tìm kiếm.
+    :return: Tuple (True, index) nếu tìm thấy; (False, -1) nếu không tìm thấy.
+    """
+    left, right = 0, len(lst) - 1
+
+    while left <= right:
+        mid = (left + right) // 2  # Tính chỉ số giữa
+        if lst[mid] == value:
+            return True, mid
+        elif lst[mid] < value:
+            left = mid + 1  # Tìm trong nửa phải
+        else:
+            right = mid - 1  # Tìm trong nửa trái
+
+    return False, -1
