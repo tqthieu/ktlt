@@ -1,0 +1,13 @@
+# Nhập tên từ bàn phím
+ten_nguoi = input("Nhập họ và tên riêng: ")
+# Tách họ và tên
+ten_nguoi = ten_nguoi.strip()  # Loại bỏ khoảng trắng đầu/cuối
+parts = ten_nguoi.split()      # Tách chuỗi thành các từ dựa vào khoảng trắng
+# Kiểm tra định dạng tên
+if len(parts) == 2:  # Đảm bảo có đúng 2 phần: họ và tên riêng
+    ho = parts[0]
+    ten_rieng = parts[1]
+    print(f"Họ: {ho}")
+    print(f"Tên riêng: {ten_rieng}")
+else:
+    print("Vui lòng nhập đúng định dạng họ và tên riêng (ví dụ: 'Nguyen Van').")
