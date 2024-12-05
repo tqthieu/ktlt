@@ -1,0 +1,17 @@
+def sum_of_divisors(num):
+    """Tính tổng các ước số của một số."""
+    total = 1  # 1 là ước số của mọi số nguyên dương
+    for i in range(2, int(num**0.5) + 1):
+        if num % i == 0:
+            total += i
+            if i != num // i:  # Tránh cộng trùng nếu i * i = num
+                total += num // i
+    return total
+
+# Nhập số nguyên dương n
+n = int(input("Nhập số nguyên dương n: "))
+
+print(f"Các số nguyên dương nhỏ hơn {n} có tổng các ước số lớn hơn chính nó là:")
+for i in range(2, n):  # Duyệt từ 2 đến n-1
+    if sum_of_divisors(i) > i:
+        print(i)
