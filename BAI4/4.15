@@ -1,0 +1,13 @@
+# Nhập chuỗi từ người dùng
+input_string = input("Nhập các từ tiếng Anh, cách nhau bởi dấu cách: ")
+
+# Tách chuỗi thành danh sách các từ
+words = input_string.split()
+
+# Sắp xếp danh sách theo thứ tự từ điển
+sorted_words = sorted(words)
+
+# In các từ đã sắp xếp
+print("Các từ theo thứ tự từ điển:")
+for word in sorted_words:
+    print(word)
