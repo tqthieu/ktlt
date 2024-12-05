@@ -1,0 +1,13 @@
+def bubbleSort(nlist):
+    """
+    Hàm sắp xếp nổi bọt (Bubble Sort).
+    :param nlist: Danh sách cần sắp xếp.
+    :return: Danh sách đã được sắp xếp.
+    """
+    n = len(nlist)
+    for i in range(n - 1):
+        for j in range(n - 1 - i):
+            if nlist[j] > nlist[j + 1]:
+                # Hoán đổi nếu phần tử hiện tại lớn hơn phần tử tiếp theo
+                nlist[j], nlist[j + 1] = nlist[j + 1], nlist[j]
+    return nlist
