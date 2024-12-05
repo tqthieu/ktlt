@@ -1,0 +1,17 @@
+def calculate_balance(transaction_log):
+    # Tách các giao dịch và chuyển thành danh sách các số
+    transactions = transaction_log.split(',')
+
+    # Khởi tạo số tiền ban đầu
+    balance = 0
+
+    # Duyệt qua tất cả các giao dịch và cập nhật số tiền
+    for transaction in transactions:
+        balance += int(transaction)
+
+    # In số tiền thực trong tài khoản
+    print(f"Số tiền thực trong tài khoản là: {balance}")
+
+# Đọc nhật ký giao dịch từ người dùng
+transaction_log = input("Nhập nhật ký giao dịch (các giao dịch cách nhau bằng dấu phẩy): ")
+calculate_balance(transaction_log)
