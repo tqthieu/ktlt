@@ -1,0 +1,31 @@
+# Import module
+from Search_module9 import binary_search
+
+def main():
+    # Nhập số lượng phần tử
+    n = int(input("Nhập số lượng phần tử trong danh sách: "))
+    
+    # Nhập danh sách từ người dùng
+    lst = []
+    print("Nhập các phần tử của danh sách:")
+    for i in range(n):
+        lst.append(int(input(f"Phần tử thứ {i+1}: ")))
+
+    # Sắp xếp danh sách trước khi tìm kiếm
+    lst.sort()
+    print("Danh sách sau khi sắp xếp:", lst)
+
+    # Nhập giá trị cần tìm kiếm
+    value = int(input("Nhập giá trị cần tìm: "))
+
+    # Gọi hàm binary_search
+    result = binary_search(lst, value)
+
+    # Hiển thị kết quả
+    if result[0]:
+        print(f"Tìm thấy {value} tại vị trí {result[1]}.")
+    else:
+        print(f"Không tìm thấy {value} trong danh sách.")
+
+if __name__ == "__main__":
+    main()
