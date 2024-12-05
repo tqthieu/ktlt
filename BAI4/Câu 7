@@ -1,0 +1,6 @@
+s = input("Nhập chuỗi: ")
+new_s = ""
+for char in s:
+    if not char.isdigit():
+        new_s += char
+print("Chuỗi mới: ", new_s)
