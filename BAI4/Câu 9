@@ -1,0 +1,2 @@
+ds = input("Nhập Chuỗi: ").split()
+print(ds)
