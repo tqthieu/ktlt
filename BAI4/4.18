@@ -1,0 +1,18 @@
+def generate_fibonacci(n):
+    """Tạo danh sách các số Fibonacci nhỏ hơn n."""
+    fibonacci_list = []
+    a, b = 0, 1  # Khởi tạo hai số đầu tiên của dãy Fibonacci
+    while a < n:
+        fibonacci_list.append(a)
+        a, b = b, a + b
+    return fibonacci_list
+
+# Nhập số nguyên n
+n = int(input("Nhập số nguyên dương n: "))
+
+# Tạo danh sách Fibonacci nhỏ hơn n
+fibonacci_numbers = generate_fibonacci(n)
+
+# In danh sách các số Fibonacci
+print(f"Các số Fibonacci nhỏ hơn {n} là:")
+print(fibonacci_numbers)
