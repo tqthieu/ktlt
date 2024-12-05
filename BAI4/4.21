@@ -1,0 +1,21 @@
+def check_divisible_by_5(binary_string):
+    # Tách chuỗi các số nhị phân thành danh sách
+    binary_numbers = binary_string.split(',')
+
+    # Danh sách chứa các số nhị phân chia hết cho 5
+    divisible_by_5 = []
+
+    for binary in binary_numbers:
+        # Chuyển số nhị phân thành số thập phân
+        decimal = int(binary, 2)
+
+        # Kiểm tra xem số thập phân có chia hết cho 5 không
+        if decimal % 5 == 0:
+            divisible_by_5.append(binary)
+
+    # In các số nhị phân chia hết cho 5
+    print(','.join(divisible_by_5))
+
+# Đọc đầu vào từ người dùng
+binary_input = input("Nhập chuỗi các số nhị phân 4 chữ số, phân tách bằng dấu phẩy: ")
+check_divisible_by_5(binary_input)
