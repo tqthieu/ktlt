@@ -1,0 +1,27 @@
+# Import module
+from search_module8 import Sequential_Search
+
+def main():
+    # Nhập số lượng phần tử của danh sách
+    n = int(input("Nhập số lượng phần tử trong danh sách: "))
+    
+    # Khởi tạo danh sách và nhập giá trị từ người dùng
+    dlist = []
+    print("Nhập các phần tử trong danh sách:")
+    for i in range(n):
+        dlist.append(int(input(f"Phần tử thứ {i+1}: ")))
+
+    # Nhập phần tử cần tìm
+    item = int(input("Nhập phần tử cần tìm: "))
+
+    # Gọi hàm Sequential_Search từ module
+    result = Sequential_Search(dlist, item)
+
+    # Hiển thị kết quả
+    if result[0]:
+        print(f"Tìm thấy {item} tại vị trí {result[1]}.")
+    else:
+        print(f"Không tìm thấy {item} trong danh sách.")
+
+if __name__ == "__main__":
+    main()
