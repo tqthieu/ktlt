@@ -7,16 +7,16 @@ def show_info():
     personal_info_window.title("Thông tin cá nhân")
     
     # Nhãn hiển thị thông tin cá nhân
-    name_label = tk.Label(personal_info_window, text="Họ và tên: Van Tuan Dat")
+    name_label = tk.Label(personal_info_window, text="Họ và tên: Trần Quốc Thiệu")
     name_label.pack(pady=5)
     
-    birth_date_label = tk.Label(personal_info_window, text="Ngày sinh: 15/06/2005")
+    birth_date_label = tk.Label(personal_info_window, text="Ngày sinh: 20/05/2002")
     birth_date_label.pack(pady=5)
     
-    mssv_label = tk.Label(personal_info_window, text="MSSV: 235752021610083")
+    mssv_label = tk.Label(personal_info_window, text="MSSV: 215752020710039")
     mssv_label.pack(pady=5)
     
-    major_label = tk.Label(personal_info_window, text="Ngành học: Tu dong hoa")
+    major_label = tk.Label(personal_info_window, text="Ngành học: ĐTVT")
     major_label.pack(pady=5)
 
 # Tạo cửa sổ chính
